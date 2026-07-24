@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fillipe Tattoo — Tatuagens autorais, tributos e coberturas | Bahia</title>
+  <meta name="description" content="Fillipe Tattoo (@fillipetattooo) — tatuagens autorais, retratos de tributo/memorial e coberturas na Bahia. Marque sua consulta." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Caveat:wght@500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- ===== NAV ===== -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#hero" class="nav__logo">Fillipe<span>Tattoo</span></a>
+
+      <nav class="nav__links" id="navLinks">
+        <a href="#sobre">Quem sou eu</a>
+        <a href="#tributo">Tributo</a>
+        <a href="#galeria">Galeria</a>
+        <a href="#bastidores">Bastidores</a>
+        <a href="#coberturas">Coberturas</a>
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#contato" class="nav__cta">Marcar consulta</a>
+      </nav>
+
+      <button class="nav__burger" id="navBurger" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <div class="hero__media" id="heroParallax">
+      <video
+        class="hero__video"
+        src="/assets/video/hero.mp4"
+        poster="/assets/img/hero-poster.jpg"
+        autoplay muted loop playsinline
+      ></video>
+      <div class="hero__overlay"></div>
+    </div>
+
+    <div class="hero__spotlight" id="heroSpotlight" aria-hidden="true"></div>
+    <div class="hero__glow hero__glow--red"></div>
+    <div class="hero__glow hero__glow--gold"></div>
+
+    <div class="hero__content">
+      <p class="label reveal">Bahia, Brasil</p>
+      <h1 class="hero__title" data-stagger>
+        <span class="reveal">FILLIPE</span><br />
+        <span class="reveal">TATTOO</span>
+      </h1>
+      <p class="hero__tagline reveal">Tatuagem autoral, tributo e cobertura — feita com técnica e respeito pela sua história.</p>
+
+      <div class="hero__actions reveal">
+        <a href="#contato" class="btn btn--primary">Marcar consulta</a>
+        <a href="https://instagram.com/fillipetattooo" target="_blank" rel="noopener" class="btn btn--ghost">@fillipetattooo</a>
+      </div>
+    </div>
+
+    <a href="#sobre" class="scroll-hint" aria-label="Rolar para baixo">
+      <span>role pra baixo</span>
+      <i></i>
+    </a>
+  </section>
+
+  <!-- ===== QUEM SOU EU ===== -->
+  <section class="about" id="sobre">
+    <div class="about__inner">
+      <div class="about__image reveal reveal--left">
+        <img src="/assets/img/artist.jpg" alt="Fillipe, tatuador" loading="lazy" />
+      </div>
+      <div class="about__text reveal reveal--right">
+        <p class="label">Quem sou eu</p>
+        <h2>O traço por trás da tinta</h2>
+        <p>
+          Sou Fillipe, tatuador baseado na Bahia. Trabalho com projetos autorais,
+          retratos de tributo e coberturas — sempre buscando entender a história
+          de quem senta na minha cadeira antes de desenhar a primeira linha.
+        </p>
+        <p>
+          Cada tatuagem é pensada sob medida: nada de flash genérico. O processo
+          começa numa conversa, passa pelo risco personalizado e só depois vira pele.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TRIBUTO / MEMORIAL ===== -->
+  <section class="tribute" id="tributo">
+    <div class="tribute__glow"></div>
+    <div class="tribute__inner">
+      <p class="label reveal">Tatuagens de tributo</p>
+      <h2 class="reveal">Memória que vira arte na pele</h2>
+      <p class="tribute__text reveal">
+        Uma das partes mais importantes do meu trabalho é fazer retratos de
+        pessoas que já se foram. É um processo delicado, feito com calma e
+        cuidado — porque não é só uma tatuagem, é uma forma de manter
+        alguém por perto. Cada tributo é conduzido com respeito à memória
+        e à história de quem está sendo homenageado.
+      </p>
+      <a href="#contato" class="btn btn--outline reveal">Conversar sobre um tributo</a>
+
+      <div class="tribute__grid" data-stagger>
+        <figure class="tribute__card reveal">
+          <img src="/assets/img/tribute-1.jpg" alt="Tatuagem de tributo — retrato" loading="lazy" />
+        </figure>
+        <figure class="tribute__card reveal">
+          <img src="/assets/img/tribute-2.jpg" alt="Tatuagem de tributo — retrato" loading="lazy" />
+        </figure>
+        <figure class="tribute__card reveal">
+          <img src="/assets/img/tribute-3.jpg" alt="Tatuagem de tributo — retrato" loading="lazy" />
+        </figure>
+        <figure class="tribute__card reveal">
+          <img src="/assets/img/tribute-4.jpg" alt="Tatuagem de tributo — retrato" loading="lazy" />
+        </figure>
+        <figure class="tribute__card reveal">
+          <img src="/assets/img/tribute-5.jpg" alt="Tatuagem de tributo — retrato" loading="lazy" />
+        </figure>
+        <figure class="tribute__card reveal">
+          <img src="/assets/img/tribute-6.jpg" alt="Tatuagem de tributo — retrato" loading="lazy" />
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MARQUEE ===== -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>Realismo</span><i>✦</i><span>Blackwork</span><i>✦</i><span>Tributo</span><i>✦</i><span>Cobertura</span><i>✦</i><span>Lettering</span><i>✦</i><span>Autoral</span><i>✦</i>
+      <span>Realismo</span><i>✦</i><span>Blackwork</span><i>✦</i><span>Tributo</span><i>✦</i><span>Cobertura</span><i>✦</i><span>Lettering</span><i>✦</i><span>Autoral</span><i>✦</i>
+    </div>
+  </div>
+
+  <!-- ===== GALERIA ===== -->
+  <section class="gallery" id="galeria">
+    <div class="section-head">
+      <p class="label reveal">Trabalhos</p>
+      <h2 class="reveal">Galeria</h2>
+    </div>
+
+    <div class="gallery__grid" data-stagger>
+      <figure class="gallery__card reveal">
+        <img src="/assets/img/gallery-1.jpg" alt="Tatuagem — realismo" loading="lazy" />
+        <figcaption>Realismo</figcaption>
+      </figure>
+      <figure class="gallery__card reveal">
+        <img src="/assets/img/gallery-2.jpg" alt="Tatuagem — blackwork" loading="lazy" />
+        <figcaption>Blackwork</figcaption>
+      </figure>
+      <figure class="gallery__card reveal">
+        <img src="/assets/img/gallery-3.jpg" alt="Tatuagem — colorida" loading="lazy" />
+        <figcaption>Colorido</figcaption>
+      </figure>
+      <figure class="gallery__card reveal">
+        <img src="/assets/img/gallery-4.jpg" alt="Tatuagem — blackwork" loading="lazy" />
+        <figcaption>Blackwork</figcaption>
+      </figure>
+      <figure class="gallery__card reveal">
+        <img src="/assets/img/gallery-5.jpg" alt="Cobertura de tatuagem" loading="lazy" />
+        <figcaption>Cobertura</figcaption>
+      </figure>
+      <figure class="gallery__card reveal">
+        <img src="/assets/img/gallery-6.jpg" alt="Tatuagem — realismo" loading="lazy" />
+        <figcaption>Realismo</figcaption>
+      </figure>
+      <figure class="gallery__card reveal">
+        <img src="/assets/img/gallery-7.jpg" alt="Cobertura — águia transformada em guerreiro" loading="lazy" />
+        <figcaption>Cobertura</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ===== BASTIDORES ===== -->
+  <section class="backstage" id="bastidores">
+    <div class="section-head">
+      <p class="label reveal">Processo real</p>
+      <h2 class="reveal">Bastidores</h2>
+    </div>
+
+    <div class="backstage__grid" data-stagger>
+      <div class="backstage__card reveal">
+        <video class="auto-video" src="/assets/video/bastidores-preparo.mp4" poster="/assets/img/bastidores-preparo.jpg" muted loop playsinline></video>
+        <span class="backstage__label">Preparo</span>
+      </div>
+      <div class="backstage__card reveal">
+        <video class="auto-video" src="/assets/video/bastidores-transferencia.mp4" poster="/assets/img/bastidores-transferencia.jpg" muted loop playsinline></video>
+        <span class="backstage__label">Transferência do desenho</span>
+      </div>
+      <div class="backstage__card reveal">
+        <video class="auto-video" src="/assets/video/bastidores-aplicacao.mp4" poster="/assets/img/bastidores-aplicacao.jpg" muted loop playsinline></video>
+        <span class="backstage__label">Aplicação</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== COBERTURAS ===== -->
+  <section class="coverup" id="coberturas">
+    <div class="coverup__inner">
+      <div class="coverup__text reveal reveal--left">
+        <p class="label">Especialidade</p>
+        <h2>Coberturas</h2>
+        <p>
+          Transformar uma tatuagem antiga em algo novo é uma das coisas que
+          mais gosto de fazer. Analiso o desenho que já existe na pele e
+          construo um projeto autoral em cima dele — respeitando o espaço,
+          a cor e o histórico, mas entregando um resultado completamente novo.
+        </p>
+      </div>
+      <div class="coverup__media reveal reveal--right">
+        <video class="auto-video" src="/assets/video/cobertura.mp4" poster="/assets/img/cobertura.jpg" muted loop playsinline></video>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DIFERENCIAIS ===== -->
+  <section class="features">
+    <div class="section-head">
+      <p class="label reveal">Diferenciais</p>
+      <h2 class="reveal">Por que tatuar comigo</h2>
+    </div>
+
+    <div class="features__grid" data-stagger>
+      <div class="feature-card reveal">
+        <span class="feature-card__num">01</span>
+        <h3>Projeto autoral</h3>
+        <p>Cada desenho é criado sob medida para quem vai levá-lo na pele — sem repetição, sem flash pronto.</p>
+      </div>
+      <div class="feature-card reveal">
+        <span class="feature-card__num">02</span>
+        <h3>Técnica em cobertura</h3>
+        <p>Especialidade em transformar tatuagens antigas em peças novas, com planejamento cuidadoso.</p>
+      </div>
+      <div class="feature-card reveal">
+        <span class="feature-card__num">03</span>
+        <h3>Cuidado com o tributo</h3>
+        <p>Retratos de memória conduzidos com sensibilidade, do primeiro papo até a cicatrização.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== COMO FUNCIONA ===== -->
+  <section class="steps" id="como-funciona">
+    <div class="section-head">
+      <p class="label reveal">Do papo à pele</p>
+      <h2 class="reveal">Como funciona</h2>
+    </div>
+
+    <div class="steps__grid" data-stagger>
+      <div class="step reveal">
+        <span class="step__num">01</span>
+        <h3>Consulta</h3>
+        <p>Conversamos sobre a ideia, referências e a história por trás da tatuagem.</p>
+      </div>
+      <div class="step reveal">
+        <span class="step__num">02</span>
+        <h3>Risco</h3>
+        <p>Desenvolvo o desenho autoral, ajustado ao seu corpo e ao seu pedido.</p>
+      </div>
+      <div class="step reveal">
+        <span class="step__num">03</span>
+        <h3>Sessão</h3>
+        <p>Aplicação com técnica e cuidado, no seu ritmo.</p>
+      </div>
+      <div class="step reveal">
+        <span class="step__num">04</span>
+        <h3>Cicatrização</h3>
+        <p>Orientações completas de pós-tatuagem para o resultado final ficar impecável.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== INSTAGRAM BANNER ===== -->
+  <section class="instagram-banner">
+    <div class="instagram-banner__glow"></div>
+    <p class="label reveal">Acompanhe o trabalho</p>
+    <h2 class="reveal">@fillipetattooo</h2>
+    <a href="https://instagram.com/fillipetattooo" target="_blank" rel="noopener" class="btn btn--primary reveal">Seguir no Instagram</a>
+  </section>
+
+  <!-- ===== CONTATO ===== -->
+  <section class="contact" id="contato">
+    <div class="contact__inner">
+      <p class="label reveal">Vamos conversar</p>
+      <h2 class="reveal">Bora marcar sua tatuagem?</h2>
+      <p class="contact__note reveal">Atendimento com hora marcada, na Bahia.</p>
+
+      <div class="contact__actions reveal">
+        <a href="https://wa.me/558798111611" target="_blank" rel="noopener" class="btn btn--primary btn--lg">Chamar no WhatsApp</a>
+        <a href="https://instagram.com/fillipetattooo" target="_blank" rel="noopener" class="btn btn--ghost btn--lg">@fillipetattooo</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p class="footer__signature">Fillipe</p>
+    <p class="footer__meta">© <span id="year"></span> Fillipe Tattoo — Bahia, Brasil</p>
+  </footer>
+
+  <a href="https://wa.me/558798111611" target="_blank" rel="noopener" class="whatsapp-float" id="whatsappFloat" aria-label="Chamar no WhatsApp">
+    <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">
+      <path d="M16.004 3C9.377 3 4 8.373 4 15c0 2.29.63 4.43 1.72 6.26L4 29l7.94-1.68A11.94 11.94 0 0 0 16.004 27C22.63 27 28 21.627 28 15S22.63 3 16.004 3Zm0 21.8c-1.94 0-3.75-.55-5.29-1.5l-.38-.22-4.7.99.99-4.58-.25-.4A9.78 9.78 0 0 1 6.2 15c0-5.4 4.4-9.8 9.8-9.8s9.8 4.4 9.8 9.8-4.4 9.8-9.8 9.8Zm5.4-7.34c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.66.15-.2.3-.76.96-.93 1.16-.17.2-.34.22-.63.07-.3-.15-1.24-.46-2.37-1.47-.88-.78-1.47-1.75-1.64-2.05-.17-.3-.02-.46.13-.6.13-.13.3-.34.44-.5.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.66-1.6-.9-2.18-.24-.58-.48-.5-.66-.5h-.56c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.87 1.22 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.62.71.22 1.36.19 1.87.12.57-.09 1.75-.72 2-1.41.24-.7.24-1.29.17-1.41-.07-.13-.27-.2-.56-.35Z"/>
+    </svg>
+  </a>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
