@@ -635,37 +635,416 @@ section {
   margin-bottom: 0.6rem;
 }
 
-/* ============ INSTAGRAM BANNER ============ */
-.instagram-banner {
-  text-align: center;
-  background: var(--bg-alt);
+/* ============ DEPOIMENTOS ============ */
+.testimonials {
+  position: relative;
+  overflow: hidden;
 }
 
-.instagram-banner__glow {
+.testimonials::before {
+  content: '';
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 50vw;
-  height: 50vw;
-  max-width: 600px;
-  max-height: 600px;
-  background: radial-gradient(circle, var(--gold) 0%, transparent 70%);
-  opacity: 0.16;
-  filter: blur(70px);
+  width: 640px;
+  height: 640px;
+  background: radial-gradient(circle, rgba(200, 153, 63, 0.09), transparent 65%);
   pointer-events: none;
 }
 
-.instagram-banner h2 {
+.testimonials__grid {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.8rem;
+  position: relative;
+}
+
+.testimonial-card {
+  position: relative;
+  background: linear-gradient(160deg, #1c1717, #141011);
+  border: 1px solid rgba(200, 153, 63, 0.22);
+  border-radius: var(--radius);
+  padding: 2.4rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.45);
+  transition: transform var(--hover-dur) ease, box-shadow var(--hover-dur) ease, border-color var(--hover-dur) ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(200, 153, 63, 0.55);
+  box-shadow: 0 24px 55px rgba(0, 0, 0, 0.55), 0 0 35px rgba(200, 153, 63, 0.14);
+}
+
+.testimonial-card__stars {
+  display: flex;
+  gap: 0.35rem;
+  font-size: 1.5rem;
+  color: var(--gold);
+  text-shadow: 0 0 12px rgba(200, 153, 63, 0.65), 0 0 28px rgba(200, 153, 63, 0.3);
+}
+
+/* ---- WhatsApp chat replica ---- */
+.wa-chat {
+  flex: 1;
+  background: #0b141a;
+  border-radius: var(--radius-sm);
+  padding: 0.9rem 0.9rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  overflow: hidden;
+}
+
+.wa-chat__header {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(240, 233, 220, 0.45);
+  margin-bottom: 0.2rem;
+}
+
+.wa-chat__icon {
+  display: inline-flex;
+  color: #25d366;
+  filter: drop-shadow(0 0 6px rgba(37, 211, 102, 0.5));
+}
+
+.wa-chat__divider {
+  text-align: center;
+  margin: 0.15rem 0;
+}
+
+.wa-chat__divider span {
+  display: inline-block;
+  background: #182229;
+  color: rgba(240, 233, 220, 0.55);
+  font-size: 0.68rem;
+  padding: 0.25rem 0.9rem;
+  border-radius: 8px;
+}
+
+.wa-chat__bubble {
+  position: relative;
+  max-width: 88%;
+  padding: 0.55rem 0.75rem 1.1rem;
+  border-radius: 14px;
+  font-size: 0.88rem;
+  line-height: 1.45;
+  color: #e9edef;
+  opacity: 0;
+  transform: translateY(12px) scale(0.96);
+}
+
+.reveal.is-visible .wa-chat__bubble,
+.is-visible .wa-chat__bubble {
+  animation: wa-pop 0.5s var(--ease) forwards;
+}
+
+.wa-chat__bubble:nth-child(2) { animation-delay: 0.15s; }
+.wa-chat__bubble:nth-child(3) { animation-delay: 0.45s; }
+.wa-chat__bubble:nth-child(4) { animation-delay: 0.7s; }
+
+@keyframes wa-pop {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.wa-chat__bubble p + p {
+  margin-top: 0.45rem;
+}
+
+.wa-chat__bubble--in {
+  align-self: flex-start;
+  background: #202c33;
+  border-top-left-radius: 4px;
+}
+
+.wa-chat__bubble--out {
+  align-self: flex-end;
+  background: #005c4b;
+  border-top-right-radius: 4px;
+}
+
+.wa-chat__time {
+  position: absolute;
+  right: 0.65rem;
+  bottom: 0.3rem;
+  font-size: 0.62rem;
+  color: rgba(233, 237, 239, 0.55);
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.wa-chat__ticks {
+  color: #53bdeb;
+  font-size: 0.62rem;
+  letter-spacing: -0.12em;
+}
+
+.testimonial-card figcaption {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-family: var(--font-label);
+  font-size: 1.05rem;
+  letter-spacing: 0.08em;
+  color: rgba(240, 233, 220, 0.65);
+}
+
+.testimonial-card__badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--gold), #e2b862);
+  color: #14100a;
+  font-size: 0.8rem;
+  font-weight: 700;
+  box-shadow: 0 0 12px rgba(200, 153, 63, 0.5);
+}
+
+/* ============ INSTAGRAM BANNER ============ */
+/* ============ INSTAGRAM CARD ============ */
+.ig-card-section {
+  text-align: center;
+  background: var(--bg-alt);
+}
+
+.ig-card-section__glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60vw;
+  height: 60vw;
+  max-width: 700px;
+  max-height: 700px;
+  background: radial-gradient(circle,
+    #e1306c 0%,
+    #f77737 25%,
+    #fcaf45 50%,
+    #833ab4 75%,
+    transparent 100%
+  );
+  opacity: 0.12;
+  filter: blur(90px);
+  pointer-events: none;
+}
+
+.ig-card-section h2 {
   position: relative;
   z-index: 1;
   color: var(--gold);
-  margin-bottom: 1.6rem;
+  margin-bottom: 2.5rem;
 }
 
-.instagram-banner .btn {
+.ig-card {
   position: relative;
   z-index: 1;
+  max-width: 420px;
+  margin: 0 auto;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: linear-gradient(145deg, #1a1a2e 0%, #16213e 50%, #0f0f1a 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow:
+    0 0 60px rgba(225, 48, 108, 0.15),
+    0 0 120px rgba(131, 58, 180, 0.1),
+    0 20px 60px rgba(0, 0, 0, 0.5);
+  transition: transform var(--hover-dur) var(--ease), box-shadow var(--hover-dur) var(--ease);
+}
+
+.ig-card:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 0 80px rgba(225, 48, 108, 0.25),
+    0 0 160px rgba(131, 58, 180, 0.15),
+    0 30px 80px rgba(0, 0, 0, 0.6);
+}
+
+.ig-card__gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+}
+
+.ig-card__header {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 1.2rem 1.2rem 0.8rem;
+}
+
+.ig-card__avatar-ring {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  padding: 3px;
+  background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  flex-shrink: 0;
+}
+
+.ig-card__avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #1a1a2e;
+}
+
+.ig-card__info {
+  flex: 1;
+  text-align: left;
+}
+
+.ig-card__handle {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0;
+}
+
+.ig-card__name {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.55);
+  margin-top: 0.1rem;
+}
+
+.ig-card__follow-btn {
+  display: inline-block;
+  padding: 0.45rem 1.2rem;
+  background: linear-gradient(135deg, #405de6, #5851db, #833ab4);
+  color: #fff;
+  font-size: 0.82rem;
+  font-weight: 600;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: opacity var(--hover-dur);
+  text-decoration: none;
+}
+
+.ig-card__follow-btn:hover {
+  opacity: 0.85;
+}
+
+.ig-card__stats {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0.8rem 1.2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.ig-card__stat {
+  text-align: center;
+}
+
+.ig-card__stat strong {
+  display: block;
+  font-size: 1.05rem;
+  color: #fff;
+}
+
+.ig-card__stat span {
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.45);
+  text-transform: lowercase;
+}
+
+.ig-card__bio {
+  padding: 0.8rem 1.2rem;
+  text-align: left;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.ig-card__bio p {
+  margin: 0;
+}
+
+.ig-card__highlights {
+  display: flex;
+  gap: 1.2rem;
+  padding: 0.5rem 1.2rem 0.8rem;
+  justify-content: flex-start;
+}
+
+.ig-card__highlight {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.ig-card__highlight span {
+  font-size: 0.68rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.ig-card__highlight-ring {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  padding: 2px;
+  background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+}
+
+.ig-card__highlight-ring img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #1a1a2e;
+}
+
+.ig-card__preview-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  padding: 2px;
+}
+
+.ig-card__preview-grid img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+.ig-card__cta {
+  display: block;
+  padding: 0.9rem;
+  text-align: center;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #e1306c;
+  background: rgba(225, 48, 108, 0.08);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  transition: background var(--hover-dur);
+}
+
+.ig-card__cta:hover {
+  background: rgba(225, 48, 108, 0.15);
 }
 
 /* ============ CONTACT ============ */
@@ -804,6 +1183,12 @@ section {
   .features__grid,
   .steps__grid,
   .tribute__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .testimonials__grid {
     grid-template-columns: 1fr;
   }
 }
