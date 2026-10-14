@@ -63,3 +63,24 @@ O `@fillipetattooo` "quica" pela tela nos vídeos originais. Nas **fotos** ele f
 de forma limpa (reconstrução `delogo`). Nos **vídeos**, como ele se move, foi usado `delogo`
 nos dois cantos — o @ deixa de ser legível, mas em áreas escuras pode sobrar uma leve
 suavização. Para remoção 100% perfeita, o ideal é exportar os vídeos originais já sem o @.
+
+---
+
+# Página de links — Luisa Guimarães (`/luisa/`)
+
+Página independente, no mesmo projeto Vite, em `luisa/` (HTML + CSS + JS, sem dependências novas).
+Não altera o site do Fillipe.
+
+- **Dev:** `npm run dev` e abra `http://localhost:5173/luisa/`
+- **Build:** `npm run build` → gera `dist/luisa/index.html` (publicada em `/luisa/` no Netlify).
+
+| O que trocar | Onde |
+|---|---|
+| Nome, textos, selo (`showBadge`), status (`isOnline`), links e ordem dos botões | `luisa/config.js` |
+| Foto | coloque o arquivo em `public/luisa/` (ex.: `foto.jpg`) e defina `photo: 'foto.jpg'` em `luisa/config.js` |
+| Cores | variáveis no topo de `luisa/style.css` (`:root`) |
+| Título/descrição de compartilhamento e texto do rodapé | `luisa/index.html` |
+
+Sem foto (ou se ela falhar ao carregar), aparece o placeholder com as iniciais "LG".
+O status "Online agora" é um valor fixo (`isOnline`), não há integração em tempo real.
+O selo é apenas visual do próprio site — não representa verificação de nenhuma plataforma.

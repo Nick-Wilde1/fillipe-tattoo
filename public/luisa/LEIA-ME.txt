@@ -1,0 +1,3 @@
+Coloque aqui a foto de perfil da Luisa (ex.: foto.jpg, quadrada, mínimo 400x400 px)
+e defina photo: 'foto.jpg' em luisa/config.js.
+Sem foto configurada, a página mostra o placeholder com as iniciais "LG".
